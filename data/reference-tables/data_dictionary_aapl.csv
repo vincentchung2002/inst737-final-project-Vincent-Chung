@@ -1,0 +1,7 @@
+attribute_name,description,data_type,example_value,unit
+Date,Trading date for the stock data,datetime,2026-03-12,YYYY-MM-DD
+Open,Opening price of AAPL at market open,float,182.63,USD
+High,Highest price of AAPL during the trading day,float,184.95,USD
+Low,Lowest price of AAPL during the trading day,float,181.28,USD
+Close,Closing price of AAPL at market close,float,183.79,USD
+Volume,Total number of shares traded during the day,integer,54126800,shares
