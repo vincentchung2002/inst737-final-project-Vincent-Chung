@@ -6,7 +6,7 @@ import seaborn as sns
 
 def transform_data():
     """
-    Clean, merge, engineer features, and EDA.
+    Clean, merge, engineer features, and EDA
     Reads:
         data/extracted/aapl_daily.csv
         data/extracted/fred_economic_data.csv
