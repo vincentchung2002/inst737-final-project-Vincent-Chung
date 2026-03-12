@@ -17,4 +17,6 @@ Price_vs_MA5,Ratio of closing price to 5-day moving average,float,1.003,ratio
 Price_vs_MA20,Ratio of closing price to 20-day moving average,float,1.024,ratio
 CPI_Change,Percentage change in CPI over 20 trading days,float,0.0031,ratio
 Unemployment_Change,Percentage change in Unemployment Rate over 20 trading days,float,-0.027,ratio
-Target,Binary target variable. 1 if next day close is higher than today. 0 otherwise,integer,1,binary
+Target_Daily,Binary target. 1 if next day close is higher than today. 0 otherwise,integer,1,binary
+Target_Monthly,Binary target. 1 if close in 20 trading days is higher than today. 0 otherwise,integer,1,binary
+Target_Yearly,Binary target. 1 if close in 252 trading days is higher than today. 0 otherwise,integer,1,binary

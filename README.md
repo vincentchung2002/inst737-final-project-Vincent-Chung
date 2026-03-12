@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Business Problem:** Investors and traders often struggle with making consistent, data-driven decisions in the stock market. This project aims to predict the short-term price direction (up or down) of Apple (AAPL) stock using historical price data and macroeconomic indicators. The client is a portfolio manager at an investment firm that provides investment advice to average, median income clients.
+**Business Problem:** Investors and traders often struggle with making consistent, data-driven decisions in the stock market. This project aims to predict the short-term (daily) and long-term (monthly/yearly) price direction (up or down) of Apple (AAPL) stock using historical price data and macroeconomic indicators. The client is a portfolio manager at an investment firm that provides investment advice to average, median income clients.
 
 **Datasets:**
 - **AAPL Daily Stock Data** — Open, High, Low, Close, Volume (source: Yahoo Finance via yfinance)
@@ -16,6 +16,7 @@
 - Feature engineering (daily returns, moving averages, rolling volatility, price-to-MA ratios, economic indicator changes)
 - Logistic Regression (baseline model)
 - Random Forest Classifier (nonlinear model)
+- Multi-horizon comparison (daily, monthly, yearly)
 
 ## Setup Instructions
 
