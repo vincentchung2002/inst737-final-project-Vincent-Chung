@@ -12,7 +12,7 @@ def transform_data():
         data/extracted/fred_economic_data.csv
     Saves:
         data/transformed/aapl_features.csv
-        data/visualizations/eda/
+        data/eda/
     Returns:
         pd.DataFrame: Final analytical dataset ready for modeling"""
 
@@ -74,7 +74,7 @@ def transform_data():
     plt.xlabel("Date")
     plt.ylabel("Price ($)")
     plt.tight_layout()
-    plt.savefig("data/visualizations/eda/aapl_closing_price.png", dpi=150)
+    plt.savefig("data/eda/aapl_closing_price.png", dpi=150)
     plt.close()
 
     #EDA - Closing price with moving averages
@@ -87,7 +87,7 @@ def transform_data():
     plt.ylabel("Price ($)")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("data/visualizations/eda/aapl_moving_averages.png", dpi=150)
+    plt.savefig("data/eda/aapl_moving_averages.png", dpi=150)
     plt.close()
 
     #EDA - Correlation matrix
@@ -97,7 +97,7 @@ def transform_data():
     sns.heatmap(merged_df[feature_cols].corr(), annot=True, fmt=".2f", cmap="coolwarm", center=0, square=True)
     plt.title("Feature Correlation Matrix")
     plt.tight_layout()
-    plt.savefig("data/visualizations/eda/correlation_matrix.png", dpi=150)
+    plt.savefig("data/eda/correlation_matrix.png", dpi=150)
     plt.close()
 
     #EDA - Daily returns distribution
@@ -107,7 +107,7 @@ def transform_data():
     plt.xlabel("Daily Return")
     plt.ylabel("Frequency")
     plt.tight_layout()
-    plt.savefig("data/visualizations/eda/daily_returns_distribution.png", dpi=150)
+    plt.savefig("data/eda/daily_returns_distribution.png", dpi=150)
     plt.close()
 
     #EDA - Target variable balance
@@ -118,7 +118,7 @@ def transform_data():
     plt.ylabel("Count")
     plt.xticks(rotation=0)
     plt.tight_layout()
-    plt.savefig("data/visualizations/eda/target_distribution.png", dpi=150)
+    plt.savefig("data/eda/target_distribution.png", dpi=150)
     plt.close()
     print("EDA plots saved")
 

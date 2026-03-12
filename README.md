@@ -45,8 +45,7 @@ inst737-final-project-Vincent-Chung/
 │   ├── extracted/              
 │   ├── transformed/           
 │   ├── model_outputs/          
-│   ├── visualizations/
-│   │   └── eda/               
+│   ├── eda/          
 │   └── reference-tables/       
 ├── etl/
 │   ├── extract.py             
