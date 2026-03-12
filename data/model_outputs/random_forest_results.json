@@ -1,0 +1,185 @@
+{
+  "model": "Random Forest",
+  "feature_cols": [
+    "Daily_Return",
+    "MA_5",
+    "MA_20",
+    "Volatility_20",
+    "Price_vs_MA5",
+    "Price_vs_MA20",
+    "Volume",
+    "CPI",
+    "Unemployment_Rate",
+    "Fed_Funds_Rate",
+    "Treasury_10Y",
+    "CPI_Change",
+    "Unemployment_Change"
+  ],
+  "horizons": {
+    "Target_Daily": {
+      "accuracy": 0.4883720930232558,
+      "classification_report": {
+        "0": {
+          "precision": 0.46973365617433416,
+          "recall": 0.7432950191570882,
+          "f1-score": 0.5756676557863502,
+          "support": 261.0
+        },
+        "1": {
+          "precision": 0.541095890410959,
+          "recall": 0.2651006711409396,
+          "f1-score": 0.35585585585585583,
+          "support": 298.0
+        },
+        "accuracy": 0.4883720930232558,
+        "macro avg": {
+          "precision": 0.5054147732926466,
+          "recall": 0.5041978451490139,
+          "f1-score": 0.465761755821103,
+          "support": 559.0
+        },
+        "weighted avg": {
+          "precision": 0.5077764930303523,
+          "recall": 0.4883720930232558,
+          "f1-score": 0.4584871255908451,
+          "support": 559.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          194,
+          67
+        ],
+        [
+          219,
+          79
+        ]
+      ],
+      "feature_importance": {
+        "Daily_Return": 0.11701843561672617,
+        "MA_5": 0.0921459791545355,
+        "MA_20": 0.09187474931519207,
+        "Volatility_20": 0.10672569578745303,
+        "Price_vs_MA5": 0.11340251147185014,
+        "Price_vs_MA20": 0.10998914518671969,
+        "Volume": 0.10872376645144931,
+        "CPI": 0.03723905944293467,
+        "Unemployment_Rate": 0.026421031115645637,
+        "Fed_Funds_Rate": 0.031447053174582594,
+        "Treasury_10Y": 0.08585026085007734,
+        "CPI_Change": 0.04474021331894114,
+        "Unemployment_Change": 0.0344220991138926
+      }
+    },
+    "Target_Monthly": {
+      "accuracy": 0.43112701252236135,
+      "classification_report": {
+        "0": {
+          "precision": 0.412573673870334,
+          "recall": 0.9170305676855895,
+          "f1-score": 0.5691056910569106,
+          "support": 229.0
+        },
+        "1": {
+          "precision": 0.62,
+          "recall": 0.09393939393939393,
+          "f1-score": 0.1631578947368421,
+          "support": 330.0
+        },
+        "accuracy": 0.43112701252236135,
+        "macro avg": {
+          "precision": 0.516286836935167,
+          "recall": 0.5054849808124917,
+          "f1-score": 0.36613179289687636,
+          "support": 559.0
+        },
+        "weighted avg": {
+          "precision": 0.5350257089737147,
+          "recall": 0.43112701252236135,
+          "f1-score": 0.3294585125495356,
+          "support": 559.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          210,
+          19
+        ],
+        [
+          299,
+          31
+        ]
+      ],
+      "feature_importance": {
+        "Daily_Return": 0.037786600200901174,
+        "MA_5": 0.11808267939743144,
+        "MA_20": 0.1394049544319426,
+        "Volatility_20": 0.09252460150332315,
+        "Price_vs_MA5": 0.044296950475296755,
+        "Price_vs_MA20": 0.07681014781526035,
+        "Volume": 0.04888613821096064,
+        "CPI": 0.09450638623111655,
+        "Unemployment_Rate": 0.055950674279707124,
+        "Fed_Funds_Rate": 0.07397472777796445,
+        "Treasury_10Y": 0.1088715888472379,
+        "CPI_Change": 0.06143054780083162,
+        "Unemployment_Change": 0.047474003028026304
+      }
+    },
+    "Target_Yearly": {
+      "accuracy": 0.4847942754919499,
+      "classification_report": {
+        "0": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 288.0
+        },
+        "1": {
+          "precision": 0.4847942754919499,
+          "recall": 1.0,
+          "f1-score": 0.653012048192771,
+          "support": 271.0
+        },
+        "accuracy": 0.4847942754919499,
+        "macro avg": {
+          "precision": 0.24239713774597496,
+          "recall": 0.5,
+          "f1-score": 0.3265060240963855,
+          "support": 559.0
+        },
+        "weighted avg": {
+          "precision": 0.23502548954976463,
+          "recall": 0.4847942754919499,
+          "f1-score": 0.3165765027911287,
+          "support": 559.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          288
+        ],
+        [
+          0,
+          271
+        ]
+      ],
+      "feature_importance": {
+        "Daily_Return": 0.018067172467796225,
+        "MA_5": 0.12021088009394498,
+        "MA_20": 0.09950763656640545,
+        "Volatility_20": 0.03691448355553098,
+        "Price_vs_MA5": 0.022167574151230388,
+        "Price_vs_MA20": 0.03644486471766503,
+        "Volume": 0.021202296337942888,
+        "CPI": 0.19410399660331165,
+        "Unemployment_Rate": 0.11627330424086134,
+        "Fed_Funds_Rate": 0.15116233094553974,
+        "Treasury_10Y": 0.08242644904676856,
+        "CPI_Change": 0.0816993733549076,
+        "Unemployment_Change": 0.01981963791809525
+      }
+    }
+  }
+}

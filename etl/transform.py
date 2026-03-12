@@ -62,9 +62,14 @@ def transform_data():
     merged_df["CPI_Change"] = merged_df["CPI"].pct_change(periods=20)
     merged_df["Unemployment_Change"] = merged_df["Unemployment_Rate"].pct_change(periods=20)
 
-    #Target variable
-    merged_df["Target"] = (merged_df["Close"].shift(-1) > merged_df["Close"]).astype(int)
-    #Drop NaN rows and shift
+    #Target variables (daily, monthly (20 days), yearly (252 days))
+    #Daily
+    merged_df["Target_Daily"] = (merged_df["Close"].shift(-1) > merged_df["Close"]).astype(int)
+    #Monthly
+    merged_df["Target_Monthly"] = (merged_df["Close"].shift(-20) > merged_df["Close"]).astype(int)
+    #Yearly
+    merged_df["Target_Yearly"] = (merged_df["Close"].shift(-252) > merged_df["Close"]).astype(int)
+    #Drop NaN rows and shifts
     merged_df.dropna(inplace=True)
 
     #EDA - Closing price over time
@@ -92,7 +97,8 @@ def transform_data():
 
     #EDA - Correlation matrix
     feature_cols = ["Close", "Volume", "Daily_Return", "MA_5", "MA_20", "Volatility_20", "Price_vs_MA5", "Price_vs_MA20",
-                    "CPI", "Unemployment_Rate", "Fed_Funds_Rate", "Treasury_10Y", "CPI_Change", "Unemployment_Change", "Target"]
+                    "CPI", "Unemployment_Rate", "Fed_Funds_Rate", "Treasury_10Y", "CPI_Change", "Unemployment_Change",
+                    "Target_Daily", "Target_Monthly", "Target_Yearly"]
     plt.figure(figsize=(12, 10))
     sns.heatmap(merged_df[feature_cols].corr(), annot=True, fmt=".2f", cmap="coolwarm", center=0, square=True)
     plt.title("Feature Correlation Matrix")
@@ -111,12 +117,13 @@ def transform_data():
     plt.close()
 
     #EDA - Target variable balance
-    plt.figure(figsize=(6, 4))
-    merged_df["Target"].value_counts().plot(kind="bar", color=["salmon", "steelblue"])
-    plt.title("Target Variable Distribution")
-    plt.xlabel("0 = Down, 1 = Up")
-    plt.ylabel("Count")
-    plt.xticks(rotation=0)
+    fig, axes = plt.subplots(1, 3, figsize=(14, 4))
+    for ax, target in zip(axes, ["Target_Daily", "Target_Monthly", "Target_Yearly"]):
+        merged_df[target].value_counts().plot(kind="bar", color=["salmon", "steelblue"], ax=ax)
+        ax.set_title(target)
+        ax.set_xlabel("0 = Down, 1 = Up")
+        ax.set_ylabel("Count")
+        ax.tick_params(axis="x", rotation=0)
     plt.tight_layout()
     plt.savefig("data/eda/target_distribution.png", dpi=150)
     plt.close()
