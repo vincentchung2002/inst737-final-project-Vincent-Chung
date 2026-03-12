@@ -4,6 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import json
 
+#Subject to change
 #Strongest model at the monthly time period (54%)
 def run_logistic():
     """

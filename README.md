@@ -56,6 +56,7 @@ inst737-final-project-Vincent-Chung/
 │   ├── logistic_model.py       
 │   └── random_forest_model.py  
 ├── vis/
+│   ├── visualizations/
 │   └── visualizations.py       
 ├── main.py                     
 ├── README.md

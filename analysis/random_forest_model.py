@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import json
 
+#Subject to change
 #Performed worse at monthly, could be overfitting?
 def run_random_forest():
     """
