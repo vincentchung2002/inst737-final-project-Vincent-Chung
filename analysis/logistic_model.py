@@ -5,10 +5,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import json
 
 #Subject to change
-#Strongest model at the monthly time period (54%)
+#Strongest model at the monthly time horizon (54%)
 def run_logistic():
     """
-    Train and evaluate logistic regression across three time periods
+    Train and evaluate logistic regression across three time horizons
     Reads:
         data/transformed/aapl_features.csv
     Saves:
