@@ -48,24 +48,24 @@ Pipeline logs are written to `pipeline.log` in the project root.
 ```
 inst737-final-project-Vincent-Chung/
 ├── data/
-│   ├── extracted/              # Raw data from yfinance and FRED
-│   ├── transformed/            # Cleaned, merged, and feature-engineered data + SQLite DB
-│   ├── model_outputs/          # Model results JSON (accuracy, ROC-AUC, classification reports)
-│   ├── model_evaluation/       # Evaluation charts: confusion matrices, ROC curves, feature importance, summary CSV
-│   ├── eda/                    # Exploratory data analysis plots
-│   └── reference-tables/       # Data dictionaries for all datasets
+│   ├── extracted/              
+│   ├── transformed/            
+│   ├── model_outputs/         
+│   ├── model_evaluation/       
+│   ├── eda/                    
+│   └── reference-tables/      
 ├── etl/
-│   ├── extract.py              # Pulls raw data from yfinance and FRED API
-│   ├── transform.py            # Cleans, merges, engineers features, generates EDA plots
-│   └── load.py                 # Validates data and loads into SQLite
+│   ├── extract.py              
+│   ├── transform.py            
+│   └── load.py                
 ├── analysis/
-│   ├── logistic_model.py       # Logistic regression training and evaluation
-│   └── random_forest_model.py  # Random forest training and evaluation
+│   ├── logistic_model.py       
+│   └── random_forest_model.py  
 ├── vis/
-│   ├── visualizations/         # Model comparison charts
-│   └── visualizations.py       # Generates accuracy/AUC comparison charts and summary CSV
-├── main.py                     # Orchestrates full pipeline with logging and error handling
-├── pipeline.log                # Runtime log output (generated on run)
+│   ├── visualizations/         
+│   └── visualizations.py       
+├── main.py                    
+├── pipeline.log                
 ├── README.md
 └── requirements.txt
 ```
