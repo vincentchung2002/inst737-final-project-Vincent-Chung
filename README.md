@@ -17,6 +17,9 @@
 - Logistic Regression (baseline model)
 - Random Forest Classifier (nonlinear model)
 - Multi-horizon comparison (daily, monthly, yearly)
+- Model evaluation: accuracy, ROC-AUC, precision, recall, F1, confusion matrices, ROC curves
+- Pipeline logging via Python `logging` module with output to `pipeline.log`
+- Error handling via `try/except` blocks at each ETL and modeling stage
 
 ## Setup Instructions
 
@@ -38,27 +41,31 @@ Run the full pipeline:
 python main.py
 ```
 
+Pipeline logs are written to `pipeline.log` in the project root.
+
 ## Code Package Structure
 
 ```
 inst737-final-project-Vincent-Chung/
 ├── data/
-│   ├── extracted/              
-│   ├── transformed/           
-│   ├── model_outputs/          
-│   ├── eda/          
-│   └── reference-tables/       
+│   ├── extracted/              # Raw data from yfinance and FRED
+│   ├── transformed/            # Cleaned, merged, and feature-engineered data + SQLite DB
+│   ├── model_outputs/          # Model results JSON (accuracy, ROC-AUC, classification reports)
+│   ├── model_evaluation/       # Evaluation charts: confusion matrices, ROC curves, feature importance, summary CSV
+│   ├── eda/                    # Exploratory data analysis plots
+│   └── reference-tables/       # Data dictionaries for all datasets
 ├── etl/
-│   ├── extract.py             
-│   ├── transform.py            
-│   └── load.py                 
+│   ├── extract.py              # Pulls raw data from yfinance and FRED API
+│   ├── transform.py            # Cleans, merges, engineers features, generates EDA plots
+│   └── load.py                 # Validates data and loads into SQLite
 ├── analysis/
-│   ├── logistic_model.py       
-│   └── random_forest_model.py  
+│   ├── logistic_model.py       # Logistic regression training and evaluation
+│   └── random_forest_model.py  # Random forest training and evaluation
 ├── vis/
-│   ├── visualizations/
-│   └── visualizations.py       
-├── main.py                     
+│   ├── visualizations/         # Model comparison charts
+│   └── visualizations.py       # Generates accuracy/AUC comparison charts and summary CSV
+├── main.py                     # Orchestrates full pipeline with logging and error handling
+├── pipeline.log                # Runtime log output (generated on run)
 ├── README.md
 └── requirements.txt
 ```
