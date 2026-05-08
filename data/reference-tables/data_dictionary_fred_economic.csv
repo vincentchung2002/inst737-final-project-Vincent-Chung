@@ -1,0 +1,6 @@
+attribute_name,description,data_type,example_value,unit
+Date,Observation date for the economic indicator,datetime,2026-03-12,YYYY-MM-DD
+CPI,Measures average change in prices paid by consumers for goods and services,float,304.127,index
+Unemployment_Rate,Percentage of the labor force that is unemployed,float,3.6,percent
+Fed_Funds_Rate,Interest rate at which banks lend reserves to each other overnight,float,5.08,percent
+Treasury_10Y,Yield on 10-year US government bonds,float,3.81,percent

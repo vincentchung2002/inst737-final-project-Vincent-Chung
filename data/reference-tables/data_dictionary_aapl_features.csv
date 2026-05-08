@@ -1,0 +1,22 @@
+attribute_name,description,data_type,example_value,unit
+Date,Trading date (index),datetime,2026-03-12,YYYY-MM-DD
+Open,Opening price of AAPL at market open,float,182.63,USD
+High,Highest price of AAPL during the trading day,float,184.95,USD
+Low,Lowest price of AAPL during the trading day,float,181.28,USD
+Close,Closing price of AAPL at market close,float,183.79,USD
+Volume,Total number of shares traded during the day,integer,54126800,shares
+CPI,Consumer Price Index forward-filled to daily frequency,float,304.127,index 
+Unemployment_Rate,Unemployment Rate forward-filled to daily frequency,float,3.6,percent
+Fed_Funds_Rate,Federal Funds Rate forward-filled to daily frequency,float,5.08,percent
+Treasury_10Y,10-Year Treasury Yield forward-filled to daily frequency,float,3.81,percent
+Daily_Return,Daily percentage change in closing price,float,0.0072,ratio
+MA_5,5-day rolling mean of closing price,float,183.15,USD
+MA_20,20-day rolling mean of closing price,float,179.42,USD
+Volatility_20,20-day rolling standard deviation of daily returns,float,0.0134,ratio
+Price_vs_MA5,Ratio of closing price to 5-day moving average,float,1.003,ratio
+Price_vs_MA20,Ratio of closing price to 20-day moving average,float,1.024,ratio
+CPI_Change,Percentage change in CPI over 20 trading days,float,0.0031,ratio
+Unemployment_Change,Percentage change in Unemployment Rate over 20 trading days,float,-0.027,ratio
+Target_Daily,Binary target. 1 if next day close is higher than today. 0 otherwise,integer,1,binary
+Target_Monthly,Binary target. 1 if close in 20 trading days is higher than today. 0 otherwise,integer,1,binary
+Target_Yearly,Binary target. 1 if close in 252 trading days is higher than today. 0 otherwise,integer,1,binary
