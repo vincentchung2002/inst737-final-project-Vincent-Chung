@@ -1,3 +1,7 @@
+"""
+Main entry point for the AAPL stock price direction prediction pipeline.
+Runs ETL (extract, transform, load), logistic regression, random forest, and visualization stages in sequence. All stages are logged.
+"""
 import logging
 from etl.extract import extract_data
 from etl.transform import transform_data
