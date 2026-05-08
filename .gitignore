@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 pipeline.log
 .DS_Store
+data/extracted/*
+data/transformed/*
+data/eda/*.png
+data/model_outputs/*
+data/model_evaluation/*.png
+data/model_evaluation/*.csv
+vis/visualizations/*.png
+!data/extracted/.gitkeep
+!data/transformed/.gitkeep
+!data/model_outputs/.gitkeep
